@@ -30,21 +30,25 @@ This repository is a hands-on learning project that introduces you to:
 ### 📦 Installation Steps
 
 1. 🧾 **Clone the Repository**
+
    ```bash
    git clone https://github.com/sunqfuu/Node-JS-Learning.git
    ```
 
 2. 📂 **Navigate into the project folder**
+
    ```bash
    cd Node-JS-Learning
    ```
 
 3. 📥 **Install dependencies**
+
    ```bash
    npm install
    ```
 
 4. 🏁 **Run the server**
+
    ```bash
    node index.js
    ```
@@ -91,4 +95,3 @@ This project is licensed under the **[MIT License](LICENSE)**.
 Use it. Modify it. Share it. 💚
 
 ---
-
