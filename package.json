@@ -1,0 +1,26 @@
+{
+  "name": "node-js-learning",
+  "version": "1.0.0",
+  "description": "node js ",
+  "keywords": [
+    "node",
+    "js",
+    "javascript"
+  ],
+  "homepage": "https://github.com/sunqfuu/Node-JS-Learning#readme",
+  "bugs": {
+    "url": "https://github.com/sunqfuu/Node-JS-Learning/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunqfuu/Node-JS-Learning.git"
+  },
+  "license": "ISC",
+  "author": "sunqfu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
