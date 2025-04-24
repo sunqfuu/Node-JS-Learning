@@ -1,8 +1,6 @@
 "use strict";
 
-const { response } = require("express");
-const express = require("express");
-const app = express();
+
 
 console.log("hello world!");
 
@@ -125,3 +123,37 @@ let filterFunction = () => {
 }
 
 filterFunction();
+
+// ES 5 - reduce ()
+let reduceFunction = () => {
+  let array = [1, 2, 3, 4, 5, 6];
+  let sum = array.reduce((one, two) => {
+    return one + two;
+  }, 0);
+  console.log(sum);
+}
+
+reduceFunction();
+
+// ES 5 - ReduceRight ()
+let ReduceRightFunction = () => {
+  let array = [1, 2, 3, 4, 5, 6];
+  let sum = array.reduceRight((one, two) => {
+    return one + two;
+  }, 0);
+  console.log(sum);
+}
+
+ReduceRightFunction();
+
+// ES 5 - every ()
+let everyFunction = () => {
+  let array = [1, 2, 3, 4, 5, 6, 7];
+  let isResult = array.every((response) => {
+    return response > 0;
+  })
+  const data = (isResult) ? "Sıfırdan Büyük" : "Sıfırdan Küçük";
+  console.log(data);
+}
+
+everyFunction();
