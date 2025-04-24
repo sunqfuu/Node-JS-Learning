@@ -188,3 +188,49 @@ let lastIndexOfFunction = () => {
   console.log("sağdan " + isResult);
 }
 lastIndexOfFunction();
+
+// ES 5 - getter ()
+
+let getterFunction = () => {
+  const person = {
+    _username: "Steven",
+    _surname: "Wilson",
+
+    get username() {
+      console.log("Getting Username");
+      return this._username;
+    }
+  }
+  console.log(person.username);
+}
+getterFunction();
+
+// ES 5 - setter ()
+
+let setterFunction = () => {
+  const person = {
+    _username: "",
+    _surname: "",
+
+    set username(value) {
+      console.log("Setting Username");
+      this._username = value;
+    }
+  }
+  person.username = "Mikael";
+  console.log(person._username);
+}
+setterFunction();
+
+// ES 5 - Rezerved
+let rezervedFunction = () => {
+  const rezervedObject = {
+    class: "Class Name 44",
+    function: "Function Name 44",
+  }
+  console.log(rezervedObject.class);
+  console.log(rezervedObject.function);
+  console.log(rezervedObject["function"]);
+}
+
+rezervedFunction();
