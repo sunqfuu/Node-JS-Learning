@@ -255,3 +255,32 @@ let letConstArrowFunction = () => {
 }
 letConstArrowFunction();
 
+// ES 6 - forOf ()
+let forOfFunction = () => {
+  let array = [1, 2, 3, 4, 5];
+  for (let data of array) {
+    console.log(data);
+  }
+}
+forOfFunction();
+
+// ES 6 - theOperator () Spread Operator
+let theOperatorSpreadFunction = () => {
+  let array = [1, 2, 3, 4, 5];
+  let array2 = [...array, 6, 7, 8, 9, 10];
+  for (let data of array2) {
+    console.log(data);
+  }
+}
+theOperatorSpreadFunction();
+
+// ES 6 - theOperator () Rest Operator
+let restParameterSpreadFunction = () => {
+  function sum(...data) {
+    for (let temp of data) {
+      console.log(temp);
+    }
+  }
+  sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+}
+restParameterSpreadFunction();
