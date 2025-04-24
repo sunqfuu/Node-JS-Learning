@@ -234,3 +234,24 @@ let rezervedFunction = () => {
 }
 
 rezervedFunction();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ES 6 - Arrow Function
+let letConstArrowFunction = () => {
+  var varData = 44;
+  console.log(varData);
+  var varData = 55;
+  console.log(varData);
+
+  let letData = 16;
+  console.log(letData);
+  letData = 20; // let ile tanımlanan değişkenler yeniden tanımlanamaz ama değeri değiştirilebilir.
+  console.log(letData);
+
+  const constData = 33;
+  console.log(constData);
+
+  // constData = 44; // const ile tanımlanan değişkenler yeniden tanımlanamaz ve değeri değiştirilemez.
+}
+letConstArrowFunction();
+
