@@ -157,3 +157,34 @@ let everyFunction = () => {
 }
 
 everyFunction();
+
+// ES 5 - some ()
+
+let someFunction = () => {
+  let array = [1, 2, 3, 4, 5, 6, 7];
+  let isResult = array.some((response) => {
+    return response % 2 === 0;
+  })
+  const data = (isResult) ? "Bir tane şart sağlanıyor" : "Sağlamıyor";
+  console.log(data);
+}
+
+someFunction();
+
+// ES 5 - indexOf ()
+
+let indexOfFunction = () => {
+  let array = [1, 2, 3, 5, 2];
+  let isResult = array.indexOf(2);
+  console.log("soldan " + isResult);
+}
+indexOfFunction();
+
+// ES 5 - lastIndexOf ()
+
+let lastIndexOfFunction = () => {
+  let array = [1, 2, 3, 5, 2];
+  let isResult = array.lastIndexOf(2);
+  console.log("sağdan " + isResult);
+}
+lastIndexOfFunction();
