@@ -43,33 +43,33 @@ let dateNowFunction = () => {
 
 // ES 5 trim()
 let trimFunction = () => {
-    const sunqfuTrim = "   Node JS Learning ";
-    console.log(sunqfuTrim);
-    console.log(sunqfuTrim.length);
-    console.log(sunqfuTrim.trim().length);
+  const sunqfuTrim = "   Node JS Learning ";
+  console.log(sunqfuTrim);
+  console.log(sunqfuTrim.length);
+  console.log(sunqfuTrim.trim().length);
 
 };
 trimFunction();
 
 const personObject = function () {
-    let person = {
-        name: "Steven",
-        surname: "Wilson",
-        number: 44,
-        isLogin: true,
-    }
-    return person;
+  let person = {
+    name: "Steven",
+    surname: "Wilson",
+    number: 44,
+    isLogin: true,
+  }
+  return person;
 }
 
 // ES 5 - JSON.stringify() JSON.parse()
 
 let jsonStringifyParseFunction = () => {
-    const person = personObject();
-    let stringifyObject = JSON.stringify(person);
-    console.log(stringifyObject);
+  const person = personObject();
+  let stringifyObject = JSON.stringify(person);
+  console.log(stringifyObject);
 
-    let parseObject = JSON.parse(stringifyObject);
-    console.log(parseObject);
+  let parseObject = JSON.parse(stringifyObject);
+  console.log(parseObject);
 }
 jsonStringifyParseFunction();
 
@@ -79,9 +79,9 @@ let isArrayFunction = () => {
   let array = [1, 2, 3, 4, 5];
   let arrayData = Array.isArray(array);
   console.log(arrayData);
-  if (arrayData) {  
+  if (arrayData) {
     console.log("This is an array.");
-  }else{
+  } else {
     console.log("This is not an array.");
   }
 }
@@ -93,7 +93,7 @@ let forEachFunction = () => {
   let array = [1, 2, 3, 4, 5];
   let arrayData = array.forEach((response) => {
     console.log(response * 2);
-  } )
+  })
 
 }
 
