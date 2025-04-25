@@ -338,3 +338,22 @@ let promisesFunction = () => {
   })
 }
 promisesFunction();
+
+
+// ES 6 - StartsWitdh, EndsWith ()
+let includeStartsEndsFunction = () => {
+  const text = "Hello World ";
+
+  //Includes
+  console.log(text.includes("World")); // true
+
+  //StartsWith
+  console.log(text.startsWith("Hello")); // true
+
+  //EndsWith
+  console.log(text.endsWith("World")); // false
+
+  console.log(text.endsWith(" ")); // true
+
+}
+includeStartsEndsFunction();
