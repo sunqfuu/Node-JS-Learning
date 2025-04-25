@@ -287,15 +287,18 @@ restParameterSpreadFunction();
 
 // ES 6 - Classes
 let classesFunction = () => {
-  class Animal{
+  //Class Declaration
+  class Animal {
     constructor(name, sound) {
       this.name = name;
       this.sound = sound;
     }
+    //Method
     makeSound() {
       console.log(`name: ${this.name}, says: ${this.sound}`);
     }
- }
+  }
+  //Class Instantiation
   const cat = new Animal("Cat", "Meow");
   cat.makeSound();
 
@@ -303,3 +306,35 @@ let classesFunction = () => {
   dog.makeSound();
 }
 classesFunction();
+
+// ES 6 - Default Parameters
+let defaultFunction = () => {
+
+  function greet(name = "Kubrick") {
+    console.log(`Hello ${name}`)
+  }
+  greet();
+
+}
+defaultFunction();
+
+// ES 6 - Promises
+let promisesFunction = () => {
+  function fetchData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const success = true;
+        if (success)
+          resolve("Data fetched successfully");
+        else
+          reject("Error fetching data")
+      }, 2000);
+    })
+  }
+  fetchData().then((response) => {
+    console.log("Data fetched successfully " + response);
+  }).catch((err) => {
+    console.log(err);
+  })
+}
+promisesFunction();
