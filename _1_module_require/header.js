@@ -6,7 +6,3 @@ const header = () => {
 //export ile modül dışına aktarıyoruz
 module.exports = header;
 
-const footer = () => {
-    console.log("footer")
-}
-module.exports = footer;

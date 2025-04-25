@@ -1,10 +1,17 @@
-// Export (header)
+// Export (header) Sinle Function
 
-const headerOther = require('./myModule.js');
-const footerOther = require('./myModule.js');
+const headerOther = require('./header.js');
+
 
 //node main.js
 headerOther();
-footerOther();
 
+
+// Export Footers Multi Function (Alias)
+
+const foot1Function = require('./footer.js').foot1;
+const foot2Function = require('./footer.js').foot2;
+
+foot1Function();
+foot2Function();
 
