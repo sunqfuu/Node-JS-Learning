@@ -284,3 +284,22 @@ let restParameterSpreadFunction = () => {
   sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 }
 restParameterSpreadFunction();
+
+// ES 6 - Classes
+let classesFunction = () => {
+  class Animal{
+    constructor(name, sound) {
+      this.name = name;
+      this.sound = sound;
+    }
+    makeSound() {
+      console.log(`name: ${this.name}, says: ${this.sound}`);
+    }
+ }
+  const cat = new Animal("Cat", "Meow");
+  cat.makeSound();
+
+  const dog = new Animal("Dog", "Woof");
+  dog.makeSound();
+}
+classesFunction();
