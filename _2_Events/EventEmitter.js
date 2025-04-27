@@ -12,8 +12,8 @@ const myEmitter = new myEvent.EventEmitter();
 const eventSpecialDataCreate = "fileCreate";
 
 // Event Listener
-myEmitter.on(eventSpecialDataCreate,() => {
-console.log("fileCreate Event Listener");
+myEmitter.on(eventSpecialDataCreate, () => {
+    console.log("fileCreate Event Listener");
 });
 
 // Event Trigger
@@ -22,4 +22,4 @@ myEmitter.emit(eventSpecialDataCreate);
 //
 setInterval(() => {
     myEmitter.emit(eventSpecialDataCreate);
-}, 1000)
+}, 2000)
