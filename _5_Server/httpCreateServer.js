@@ -2,8 +2,10 @@ console.log(__dirname);
 
 // Server Object
 const serverObject = {
-  name: "localhost",
-  port: 3000,
+  host: "localhost",
+  port: 3333,
+  head: { contentType: "Content-Type", charset: "text/plain; charset= utf-8" },
+  status: { ok: 200, notFound: 404, created: 201, noContent: 204 },
 };
 
 // HTTP Module
@@ -13,20 +15,25 @@ const http = require("http");
 const server = http.createServer((request, response) => {
   console.log("HTTP Server Created");
 
-  // Port Listen
-  server.listen(serverObject.port, () => {
-    console.log(`Server is running on http://${serverObject.port}`);
+  // Header
+  response.writeHead(serverObject.status.ok, {
+    "Content-Type": "text/html; charset=utf-8",
   });
 
   //Request Server
+  console.log("***************** REQUEST ********************");
   console.log(request);
-  console.log(request.url);
+  console.log("Request URL" + request.url);
 
   // Response Server
+  console.log("***************** RESPONSE ********************");
   console.log(response);
 
-  // Header
-
   // Response End
-  response.end("<h1>Node.JS HTTP Server Created</h1>");
+  response.end("<h1>Node.JS HTTP Server Created üşği</h1>");
+});
+
+// Port Listen
+server.listen(serverObject.port, () => {
+  console.log(`Server is running on http://localhost:${serverObject.port}`);
 });
