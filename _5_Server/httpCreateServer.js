@@ -41,7 +41,7 @@ const server = http.createServer((request, response) => {
   // Response Server
   console.log("***************** RESPONSE ********************");
   // console.log(response);
-  response.write("<b>Helloğ</b>")
+  response.write("<b>Helloğ</b>");
 
   // Response End
   response.end("<h1>Node.JS HTTP Server Created üşği</h1>");
