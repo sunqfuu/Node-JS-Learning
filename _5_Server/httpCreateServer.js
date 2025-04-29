@@ -16,18 +16,32 @@ const server = http.createServer((request, response) => {
   console.log("HTTP Server Created");
 
   // Header
+  // response.writeHead(200,{
+  //   "Content-Type": "text/html; charset=utf-8",
+  // });
+  // response.writeHead(200, {
+  //   "Content-Type": "text/plain; charset=utf-8",
+  // });
+  // response.writeHead(200,{
+  //   "Content-Type": "application/json; charset=utf-8",
+  // });
+
   response.writeHead(serverObject.status.ok, {
     "Content-Type": "text/html; charset=utf-8",
   });
 
   //Request Server
   console.log("***************** REQUEST ********************");
-  console.log(request);
-  console.log("Request URL" + request.url);
+  // console.log(request);
+  // console.log("Request URL" + request.url);
+  console.log(request.url);
+  console.log(request.headers);
+  console.log(request.headers.host);
 
   // Response Server
   console.log("***************** RESPONSE ********************");
-  console.log(response);
+  // console.log(response);
+  response.write("<b>Helloğ</b>")
 
   // Response End
   response.end("<h1>Node.JS HTTP Server Created üşği</h1>");
