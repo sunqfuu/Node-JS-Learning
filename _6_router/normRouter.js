@@ -36,22 +36,34 @@ const server = http.createServer((request, response) => {
   //Request
   if (request.method === "GET") {
     //Root
-    if (http.request === "/" || request.url === "/index") {
+    if (request.url === "/" || request.url === "/index") {
       fs.readFile(indexPage, (err, data) => {
         if (err) throw err;
-        response.write(data);
+        response.end(data);
       });
-      response.write("Homepage");
+      //   response.write("Homepage");
     } else if (request.url === "/login") {
-      response.write("Login Screen");
+      fs.readFile(loginPage, (err, data) => {
+        if (err) throw err;
+        response.end(data);
+      });
+      //   response.write("Login Screen");
     } else if (request.url === "/register") {
-      response.write("Register Screen");
+      fs.readFile(registerPage, (err, data) => {
+        if (err) throw err;
+        response.end(data);
+      });
+      //   response.write("Register Screen");
     } else {
-      response.write(serverObject.statusCode.notFound + " Page Not Found");
+      fs.readFile(notFoundPage, (err, data) => {
+        if (err) throw err;
+        response.end(data);
+      });
+      //   response.write(serverObject.statusCode.notFound + " Page Not Found");
     }
   }
 
-  response.end();
+  //  response.end();
 }); // End Server
 
 //Port
